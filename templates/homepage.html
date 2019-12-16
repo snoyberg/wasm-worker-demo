@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rusty Homepage</title>
+  </head>
+  <body>
+    <h1>Rusty Homepage</h1>
+    <p>Request headers</p>
+    <form method="post" action="/submit">
+        <p>Name: <input type="text" name="name"></p>
+        <p>Email: <input type="email" name="email"></p>
+        <p>Age: <input type="number" name="age"></p>
+        <input type="submit">
+    </form>
+    <dl>
+      {% for (key, value) in headers %}
+        <dt><code>{{ key }}</code></dt>
+        <dd><code>{{ value }}</code></dd>
+      {% endfor %}
+    </dl>
+  </body>
+</html>
